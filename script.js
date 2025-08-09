@@ -155,25 +155,56 @@ document.addEventListener('DOMContentLoaded', function() {
         new Chart(pieTodayCtx, { type: 'pie', data: { labels: Object.keys(todaySubjectData), datasets: [{ label: 'Minutos na Sessão', data: Object.values(todaySubjectData), backgroundColor: pieChartColors, borderColor: '#21212C', borderWidth: 2 }] }, options: pieChartOptions() });
     }
 
-    // AQUI ESTÁ A CORREÇÃO: maintainAspectRatio foi alterado de 'false' para 'true'
-    function pieChartOptions() {
-        return {
-            responsive: true,
-            maintainAspectRatio: true, // ESTA LINHA FOI CORRIGIDA
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels: { color: '#f0f0f0', font: { size: 12 } }
-                }
-            }
-        };
-    }
-
+    function pieChartOptions() { return { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'top', labels: { color: '#f0f0f0', font: { size: 12 } } } } }; }
     function chartOptions(textColor) { return { scales: { y: { beginAtZero: true, ticks: { color: textColor }, grid: { color: 'rgba(255, 255, 255, 0.1)' } }, x: { ticks: { color: textColor }, grid: { display: false } } }, plugins: { legend: { labels: { color: textColor } } } }; }
 
+    // ==================================================================
+    // ## PARTE 2: NAVEGAÇÃO DO SITE (COM CORREÇÃO FINAL)
+    // ==================================================================
     const navLinks = document.querySelectorAll('#navbar a');
     const sections = document.querySelectorAll('main > div[id], main > section[id]');
-    navLinks.forEach(link => { link.addEventListener('click', function(e) { e.preventDefault(); const targetId = this.getAttribute('href'); const targetElement = document.querySelector(targetId); if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
-    window.addEventListener('scroll', () => { let current = ''; sections.forEach(section => { const sectionTop = section.offsetTop; if (pageYOffset >= sectionTop - 70) { current = section.getAttribute('id'); } }); navLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === `#${current}`) { link.classList.add('active'); } }); });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+            this.classList.add('active');
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        
+        // --- INÍCIO DA CORREÇÃO ---
+        // Verifica se o usuário rolou até o final da página
+        const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2; // -2px de margem de erro
+        
+        if (isAtBottom) {
+            // Se estiver no final, força a última seção a ser a ativa
+            currentSectionId = sections[sections.length - 1].id;
+        } else {
+            // Se não, usa a lógica normal
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 70) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+        }
+        // --- FIM DA CORREÇÃO ---
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    });
 
 });
