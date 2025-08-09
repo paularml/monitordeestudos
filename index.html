@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Estudos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul class="nav-links">
+            <li><a href="#visao-geral">Visão Geral</a></li>
+            <li><a href="#progresso">Progresso</a></li>
+            <li><a href="#graficos">Gráficos</a></li>
+            <li><a href="#revisoes">Revisões</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <header>
+            <h1>Meu Monitor de Estudos</h1>
+            <p>Rumo à aprovação em 70 dias!</p>
+        </header>
+
+        <main>
+            <div id="visao-geral"> <section class="card stats-grid">
+                    <div class="stat-item">
+                        <h2>Hoje</h2>
+                        <p id="minutos-hoje">0 min</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>Esta Semana</h2>
+                        <p id="minutos-semana">0 min</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>Este Mês</h2>
+                        <p id="minutos-mes">0 min</p>
+                    </div>
+                </section>
+                <section class="card stats-grid">
+                    <div class="stat-item">
+                        <h2>Pomodoros Hoje</h2>
+                        <p id="pomodoros-hoje">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>Pomodoros Semana</h2>
+                        <p id="pomodoros-semana">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>Pomodoros Mês</h2>
+                        <p id="pomodoros-mes">0</p>
+                    </div>
+                </section>
+            </div>
+            
+            <div id="progresso"> <section class="card">
+                    <h2>Progresso Total (70 dias)</h2>
+                    <div class="progress-container">
+                        <div class="progress-bar-outer">
+                            <div class="progress-bar-inner" id="total-progress-bar"></div>
+                        </div>
+                        <span id="total-progress-text">0/70 dias</span>
+                    </div>
+                </section>
+                <section class="card">
+                    <h2>Dias Concluídos</h2>
+                    <div class="days-grid" id="days-grid"></div>
+                </section>                 
+            </div>
+            
+            <div id="graficos"> <section class="card">
+                    <h2>Frequência de Estudos (Minutos por Dia)</h2>
+                    <canvas id="study-chart" width="400" height="200"></canvas>
+                </section>
+                <section class="card">
+                    <h2>Estudo por Disciplina (Minutos)</h2>
+                    <div class="chart-container">
+                        <canvas id="subject-pie-chart" width="400" height="400"></canvas>
+                    </div>
+                </section>
+            </div>
+            
+            <section class="card" id="revisoes">
+                <h2>Revisões Programadas (Painel de Controle Anki)</h2>
+                <div class="revisoes-grid">
+                    <div class="revisao-item">
+                        <h3>Revisar Hoje</h3>
+                        <ul>
+                            <li>Anki: Baralho de Direito Administrativo.</li>
+                            <li>Ler anotações da aula de ontem.</li>
+                        </ul>
+                    </div>
+                    <div class="revisao-item">
+                        <h3>Agendado para esta Semana</h3>
+                        <ul>
+                            <li>Criar cards no Anki sobre Atos Administrativos.</li>
+                            <li>Revisar todo o baralho de Informática.</li>
+                        </ul>
+                    </div>
+                    <div class="revisao-item">
+                        <h3>Metas de Longo Prazo</h3>
+                        <ul>
+                            <li>Manter o Anki sempre zerado.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="card">
+    <h2>Diário de Bordo dos Estudos</h2>
+    <div>
+        <h4>Dia 17 (25/08): Direito Administrativo</h4>
+        <p>- Atos Administrativos: Conceito, Requisitos e Atributos. (Revisão)</p>
+        <p>- Licitações (Lei 14.133): Modalidades e Fases. (Novo)</p>
+    </div>
+    <hr style="border-color: #3E2A79; margin: 1rem 0;">
+    <div>
+        <h4>Dia 16 (24/08): Português</h4>
+        <p>- Concordância Verbal e Nominal. (Novo)</p>
+        <p>- Resolução de 20 questões sobre o tema.</p>
+    </div>
+    </section>
+        </main>
+
+        <footer>
+            <p>Feito com foco e disciplina.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
