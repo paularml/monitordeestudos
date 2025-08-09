@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 filteredData.push(minutes);
             }
         });
-        new Chart(lineChartCtx, { type: 'line', data: { labels: filteredLabels, datasets: [{ label: 'Minutos Estudados', data: filteredData, backgroundColor: 'rgba(133, 87, 183, 0.2)', borderColor: '#8557B7', borderWidth: 2, tension: 0.4, fill: true, pointBackgroundColor: '#CD77C0', pointRadius: 3 }] }, options: chartOptions('#f0f0f0') });
+        new Chart(lineChartCtx, { type: 'line', data: { labels: filteredLabels, datasets: [{ label: 'Minutos Estudados', data: filteredData, backgroundColor: 'rgba(133, 87, 183, 0.2)', borderColor: '#8557B7', borderWidth: 2, tension: 0.4, fill: true, pointBackgroundColor: '#CD77C0', pointRadius: 3 }] }, options: chartOptions('#f0f0f0') }); // não mudar essas cores
     }
 
     const totalSubjectMinutes = {};
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     const todaySubjectData = dailySubjectData.length > 0 ? dailySubjectData[dailySubjectData.length - 1] : {};
-    const pieChartColors = ['#3E2A79', '#8557B7', '#CD77C0', '#5b3ab3', '#a56de2', '#e489d5', '#7d5cce'];
+    const pieChartColors = ['#3F0140', '#402B38', '#a7058eff', '#5b3ab3', '#46736B', '#e489d5', '#50590C'];
 
     const pieTotalCtx = document.getElementById('subject-chart-total')?.getContext('2d');
     if (pieTotalCtx) {
