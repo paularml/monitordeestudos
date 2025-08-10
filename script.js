@@ -159,37 +159,42 @@ document.addEventListener('DOMContentLoaded', function() {
     function chartOptions(textColor) { return { scales: { y: { beginAtZero: true, ticks: { color: textColor }, grid: { color: 'rgba(255, 255, 255, 0.1)' } }, x: { ticks: { color: textColor }, grid: { display: false } } }, plugins: { legend: { labels: { color: textColor } } } }; }
 
     // ==================================================================
-    // ## PARTE 2: NAVEGAÇÃO DO SITE (COM CORREÇÃO FINAL)
+    // ## PARTE 2: NAVEGAÇÃO DO SITE (COM LÓGICA PARA LINKS EXTERNOS)
     // ==================================================================
     const navLinks = document.querySelectorAll('#navbar a');
     const sections = document.querySelectorAll('main > div[id], main > section[id]');
 
+    // LÓGICA DO CLIQUE (COM A CORREÇÃO)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            // Verifica se é um link interno (começa com #)
+            if (href.startsWith('#')) {
+                // Se for, executa a lógica de rolagem suave
             e.preventDefault();
+
             navLinks.forEach(navLink => navLink.classList.remove('active'));
             this.classList.add('active');
             
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+                const targetElement = document.querySelector(href);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
+            // Se não começar com '#', o código não faz nada e deixa o navegador 
+            // seguir o link externo normalmente.
         });
     });
 
+    // LÓGICA DA ROLAGEM (COM CORREÇÃO PARA O ÚLTIMO ITEM)
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
-        
-        // --- INÍCIO DA CORREÇÃO ---
-        // Verifica se o usuário rolou até o final da página
-        const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2; // -2px de margem de erro
+        const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2; 
         
         if (isAtBottom) {
-            // Se estiver no final, força a última seção a ser a ativa
             currentSectionId = sections[sections.length - 1].id;
         } else {
-            // Se não, usa a lógica normal
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (window.pageYOffset >= sectionTop - 70) {
@@ -197,15 +202,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-        // --- FIM DA CORREÇÃO ---
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
+            const linkHref = link.getAttribute('href');
+            // Só adiciona a classe 'active' para links internos
+            if (linkHref.startsWith('#') && linkHref === `#${currentSectionId}`) {
                 link.classList.add('active');
             }
         });
     });
+
     // ==================================================================
     // ## PARTE 3: FUNCIONALIDADE DO MENU HAMBÚRGUER
     // ==================================================================
@@ -213,13 +220,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-links');
 
     hamburgerBtn.addEventListener('click', () => {
-        // Alterna a classe 'active' no menu de links, fazendo-o aparecer ou desaparecer
         navMenu.classList.toggle('active');
     });
 
-    // Opcional: Fecha o menu ao clicar em um link (bom para a experiência do usuário)
-    navMenu.addEventListener('click', () => {
+    navMenu.addEventListener('click', (e) => {
+        // Fecha o menu se um link interno for clicado
+        if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
         navMenu.classList.remove('active');
+        }
     });
 
 });
