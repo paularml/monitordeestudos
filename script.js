@@ -8,31 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const studyData = [
         // Semana 1 (Dias 1-7)
-        240, 300, 280, 350, 400, 200, 0,
+        0,
         // Semana 2 (Dias 8-14)
-        250, 310, 290, 250, 310, 290, 200,
+        
         // Semana 3 (Dias 15-21)
-        400, 300, 200, 0, 0, 0, 0,
+        
     ];
 
     const pomodoroData = [
         // Semana 1
-        8, 10, 9, 12, 14, 7, 0,
+        0,
         // Semana 2
-        8, 10, 9, 8, 10, 9, 1,
+        
         // Semana 3
-        1, 5, 0, 0, 0, 0, 0,
+        
     ];
 
     const dailySubjectData = [
         // Dia 1 de estudo por disciplina
-        { 'Direito Constitucional': 120, 'Português': 60, 'Raciocínio Lógico': 60 },
+        { 'Avaliação': 120, 'Psicologia da educação': 60},
         // Dia 2
-        { 'Direito Administrativo': 150, 'Informática': 100, 'Português': 60 },
+        
         // Dia 3
-        { 'Direito Constitucional': 130, 'Português': 80, 'Raciocínio Lógico': 100 },
+        
         // Dia 4
-        { 'Informática': 130, 'Português': 80, 'Raciocínio Lógico': 100 },
+        
     ];
     
     // ##################################################################
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     const todaySubjectData = dailySubjectData.length > 0 ? dailySubjectData[dailySubjectData.length - 1] : {};
-    const pieChartColors = ['#3F0140', '#402B38', '#a7058eff', '#5b3ab3', '#46736B', '#e489d5', '#50590C'];
+    const pieChartColors = ['#600e61ff', '#310d75ff', '#a7058eff', '#5b3ab3', '#46736B', '#e489d5', '#50590C'];
 
     const pieTotalCtx = document.getElementById('subject-chart-total')?.getContext('2d');
     if (pieTotalCtx) {
@@ -172,26 +172,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Verifica se é um link interno (começa com #)
             if (href.startsWith('#')) {
                 // Se for, executa a lógica de rolagem suave
-            e.preventDefault();
+                e.preventDefault();
 
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-            this.classList.add('active');
-            
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
+                
                 const targetElement = document.querySelector(href);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
             // Se não começar com '#', o código não faz nada e deixa o navegador 
             // seguir o link externo normalmente.
         });
     });
-
+    
     // LÓGICA DA ROLAGEM (COM CORREÇÃO PARA O ÚLTIMO ITEM)
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
         const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2; 
-        
+
         if (isAtBottom) {
             currentSectionId = sections[sections.length - 1].id;
         } else {
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navMenu.addEventListener('click', (e) => {
         // Fecha o menu se um link interno for clicado
         if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
-        navMenu.classList.remove('active');
+            navMenu.classList.remove('active');
         }
     });
 
