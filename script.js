@@ -206,5 +206,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // ==================================================================
+    // ## PARTE 3: FUNCIONALIDADE DO MENU HAMBÚRGUER
+    // ==================================================================
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.querySelector('.nav-links');
+
+    hamburgerBtn.addEventListener('click', () => {
+        // Alterna a classe 'active' no menu de links, fazendo-o aparecer ou desaparecer
+        navMenu.classList.toggle('active');
+    });
+
+    // Opcional: Fecha o menu ao clicar em um link (bom para a experiência do usuário)
+    navMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
 
 });

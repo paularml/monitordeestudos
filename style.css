@@ -36,7 +36,7 @@ html {
 
 .nav-links a {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: 0.4rem 1.5rem;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
@@ -250,4 +250,81 @@ footer {
     margin-top: 2rem;
     color: #aaa;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+
+    /* --- Ajustes Gerais --- */
+    body {
+        /* Reduz o padding para dar mais espaço ao conteúdo */
+        padding-top: 50px;
+    }
+
+    .container {
+        /* Reduz as margens laterais */
+        padding: 0.5rem;
+        margin: 1rem auto;
+    }
+    
+    header h1 {
+        /* Diminui o tamanho do título principal */
+        font-size: 1.8rem;
+    }
+
+    /* --- Barra de Navegação --- */
+    #navbar {
+        /* Garante que o menu suspenso não seja cortado */
+        min-height: 50px;
+    }
+
+    /* Esconde os links por padrão */
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Organiza os links verticalmente */
+        width: 100%;
+        position: absolute;
+        top: 50px; /* Posição logo abaixo da navbar */
+        left: 0;
+        background-color: var(--bg-medium);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Mostra os links quando o menu está ativo */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        /* Faz cada link ocupar a largura toda e centraliza o texto */
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--bg-dark);
+    }
+    
+    /* --- Botão Hambúrguer --- */
+    #hamburger-btn {
+        display: flex; /* Mostra o botão em telas pequenas */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
+        
+        /* Posiciona o botão à direita na navbar */
+        position: absolute;
+        top: 12px;
+        right: 20px;
+    }
+
+    #hamburger-btn .line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+    }
 }
