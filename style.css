@@ -1,3 +1,6 @@
+html {
+    height: 100%;
+}
 :root {
     --bg-dark: #14141A;
     --bg-medium: #262633;
@@ -51,12 +54,34 @@
     border-bottom: 3px solid var(--accent2);
 }
 
+/* Substitua a regra 'body' existente por esta */
 body {
+    min-height: 100%;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-dark);
     color: var(--text-color);
     line-height: 1.6;
     padding-top: 60px; 
+    
+    /* --- INÍCIO DO CÓDIGO DO FUNDO --- */
+
+    /* 1. Imagem de fundo e um filtro escuro por cima para legibilidade */
+    background-image: 
+        linear-gradient(rgba(20, 20, 26, 0.5), rgba(20, 20, 26, 0.5)),
+        url('fundo3.gif');
+
+    /* 2. Garante que a imagem cubra toda a tela */
+    background-size: cover;
+
+    /* 3. Centraliza a imagem */
+    background-position: center center;
+
+    /* 4. Impede que a imagem se repita */
+    background-repeat: no-repeat;
+
+    /* 5. Efeito Parallax: o fundo fica fixo enquanto o conteúdo rola */
+    background-attachment: fixed;
+
+    /* --- FIM DO CÓDIGO DO FUNDO --- */
 }
 
 .container {
