@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const studyData = [
         // Semana 1 (Dias 1-7)
-        0,
+        25,
         // Semana 2 (Dias 8-14)
         
         // Semana 3 (Dias 15-21)
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const pomodoroData = [
         // Semana 1
-        0,
+        1,
         // Semana 2
         
         // Semana 3
