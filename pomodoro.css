@@ -1,12 +1,9 @@
-html {
-    height: 100%;
-}
 :root {
     --bg-dark: #14141A;
-    --bg-medium: #262633;
+    --bg-medium: #21212C;
     --primary: #3E2A79;
-    --accent1: #69389e;
-    --accent2: #d125b7;
+    --accent1: #8557B7;
+    --accent2: #CD77C0;
     --text-color: #f0f0f0;
 }
 
@@ -16,6 +13,9 @@ html {
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
 #navbar {
     background-color: var(--bg-medium);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -54,13 +54,14 @@ html {
     border-bottom: 3px solid var(--accent2);
 }
 
-/* Substitua a regra 'body' existente por esta */
 body {
-    min-height: 100%;
+    min-height: 100%; 
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    line-height: 1.6;
-    padding-top: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
     /* --- INÍCIO DO CÓDIGO DO FUNDO --- */
 
@@ -85,171 +86,94 @@ body {
 }
 
 .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
 }
 
 header h1 {
     font-size: 2.5rem;
     color: var(--accent1);
+    margin-bottom: 2rem;
 }
 
-.card {
+.pomodoro-container {
     background-color: var(--bg-medium);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid var(--accent1);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    text-align: center;
-}
-
-.stat-item h2 {
-    color: var(--accent1);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.stat-item p {
-    font-size: 2rem;
-    font-weight: 600;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-emphasis-color: transparent;
-}
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.progress-bar-outer {
-    flex-grow: 1;
-    height: 25px;
-    background-color: var(--bg-dark);
+    padding: 2rem;
     border-radius: 15px;
-    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.progress-bar-inner {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2));
-    border-radius: 15px;
-    transition: width 0.5s ease-in-out;
-}
-
-#total-progress-text {
-    font-weight: 600;
-}
-
-.days-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    gap: 0.2rem;
-}
-
-.day-item {
+.mode-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: var(--bg-dark);
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    background: transparent;
+    border: 1px solid var(--accent1);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.day-item.checked {
-    background: var(--accent1);
+.mode-btn:hover {
+    background-color: var(--primary);
+}
+
+.mode-btn.active {
+    background-color: var(--accent1);
+    color: white;
+}
+
+.timer-display {
+    margin: 2rem 0;
+}
+
+#timer {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#start-btn {
+    background-color: var(--accent1);
+    color: white;
+}
+
+#start-btn:hover {
+    background-color: var(--accent2);
+}
+
+#pause-btn, #reset-btn {
+    background-color: var(--bg-dark);
     color: var(--text-color);
 }
 
-.day-item input[type="checkbox"] {
-    display: none;
-}
-
-.day-item label {
-    cursor: pointer;
-}
-
-.charts-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap; 
-    gap: 2rem;
-}
-
-.chart-container {
-    position: relative;
-    margin: 1rem auto;
-    flex: 1;
-    min-width: 280px; 
-    max-width: 450px;
-}
-
-.chart-container h3 {
-    text-align: center;
-    color: var(--accent1);
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-
-canvas {
-    background-color: var(--bg-dark);
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.revisoes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.revisao-item h3 {
-    color: var(--accent2);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.revisao-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.revisao-item li {
-    background-color: var(--bg-dark);
-    padding: 0.8rem;
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-}
-
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    color: #aaa;
-    font-size: 0.9rem;
+#pause-btn:hover, #reset-btn:hover {
+    background-color: #3e3e4a;
 }
 
 /* --- Esconde o botão hambúrguer em telas grandes --- */
