@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const studyData = [
         // Semana 1 (Dias 1-7)
-        25, 120
+        25, 150
         // Semana 2 (Dias 8-14)
         
         // Semana 3 (Dias 15-21)
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Dia 1 de estudo por disciplina
         { 'Avaliação': 0, 'Psicologia da educação': 25},
         // Dia 2
-        { 'Avaliação': 0, 'Psicologia da educação': 120},
+        { 'Avaliação': 20, 'Psicologia da educação': 120},
         // Dia 3
         
         // Dia 4
