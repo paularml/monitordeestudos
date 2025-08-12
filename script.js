@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const studyData = [
         // Semana 1 (Dias 1-7)
-        25,
+        25, 120
         // Semana 2 (Dias 8-14)
         
         // Semana 3 (Dias 15-21)
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const pomodoroData = [
         // Semana 1
-        1,
+        1, 0
         // Semana 2
         
         // Semana 3
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const dailySubjectData = [
         // Dia 1 de estudo por disciplina
-        { 'Avaliação': 120, 'Psicologia da educação': 60},
+        { 'Avaliação': 0, 'Psicologia da educação': 25},
         // Dia 2
-        
+        { 'Avaliação': 0, 'Psicologia da educação': 120},
         // Dia 3
         
         // Dia 4
