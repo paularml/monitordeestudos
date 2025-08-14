@@ -68,7 +68,7 @@ body {
     /* 1. Imagem de fundo e um filtro escuro por cima para legibilidade */
     background-image: 
         linear-gradient(rgba(20, 20, 26, 0.5), rgba(20, 20, 26, 0.5)),
-        url('fundo3.gif');
+        url('../img/fundo3.gif');
 
     /* 2. Garante que a imagem cubra toda a tela */
     background-size: cover;
