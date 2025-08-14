@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const studyData = [
         // Semana 1 (Dias 1-7)
-        25, 150, 180,
+        25, 150, 180, 40,
         // Semana 2 (Dias 8-14)
         
         // Semana 3 (Dias 15-21)
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const pomodoroData = [
         // Semana 1
-        1, 0, 4,
+        1, 0, 4, 0,
         // Semana 2
         
         // Semana 3
@@ -32,7 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Dia 3
         { 'Avaliação': 10, 'Psicologia da educação': 10, 'Teorias Pedagógicas': 120, 'História da Educação': 0},
         // Dia 4
-        
+        { 'Avaliação': 20, 'Psicologia da educação': 10, 'Teorias Pedagógicas': 10, 'História da Educação': 0},
+        // Dia 5
+        // Dia 6
+        // Dia 7
+        // Dia 8
+        // Dia 9
+        // Dia 10
     ];
     
     // ##################################################################
