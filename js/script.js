@@ -219,21 +219,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ==================================================================
-    // ## PARTE 3: FUNCIONALIDADE DO MENU HAMBÚRGUER
-    // ==================================================================
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navMenu = document.querySelector('.nav-links');
-
-    hamburgerBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-
-    navMenu.addEventListener('click', (e) => {
-        // Fecha o menu se um link interno for clicado
-        if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
-            navMenu.classList.remove('active');
-        }
-    });
-
 });

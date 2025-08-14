@@ -103,25 +103,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicia o display com o tempo padrão
     updateDisplay();
 
-
-    // ==================================================================
-    // ## PARTE 2: FUNCIONALIDADE DO MENU HAMBÚRGUER
-    // ==================================================================
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navMenu = document.querySelector('.nav-links');
-
-    if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', () => {
-            // Alterna a classe 'active' no menu de links, fazendo-o aparecer ou desaparecer
-            navMenu.classList.toggle('active');
-        });
-
-        // Opcional: Fecha o menu se um link for clicado
-        navMenu.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-            }
-        });
-    }
-
 });
