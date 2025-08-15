@@ -51,8 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTimer() {
         timeLeft--;
         const formattedTime = formatTime(timeLeft);
-        timerDisplay.textContent = formattedTime;
-        document.title = `${formattedTime} - Foco Total`;
+        timerDisplay.textContent = formattedTime;        
 
         if (timeLeft < 0) {
             clearInterval(timer);
@@ -137,22 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicia o display e carrega a contagem salva
     updateDisplay();
     loadPomodoroCount();
-
-    // ==================================================================
-    // ## PARTE 2: FUNCIONALIDADE DO MENU HAMBÚRGUER
-    // ==================================================================
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navMenu = document.querySelector('.nav-links');
-
-    if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        navMenu.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-            }
-        });
-    }
+  
 
 });
