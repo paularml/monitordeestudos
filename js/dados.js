@@ -7,7 +7,7 @@ const planStartDate = '2025-08-10'; // FORMATO: 'AAAA-MM-DD'
 
 const studyData = [
     // Semana 1 (Dias 1-7)
-    25, 150, 180, 40,
+    25, 150, 180, 40, 155,
     // Semana 2 (Dias 8-14)
         
     // Semana 3 (Dias 15-21)
@@ -22,7 +22,7 @@ const studyData = [
 
 const pomodoroData = [
     // Semana 1
-    1, 0, 4, 0,
+    1, 0, 4, 0, 6,
     // Semana 2
           
     // Semana 3
@@ -45,6 +45,7 @@ const dailySubjectData = [
     // Dia 4
     { 'Avaliação': 20, 'Psicologia da educação': 10, 'Teorias Pedagógicas': 10, 'História da Educação': 0},
     // Dia 5
+    { 'Avaliação': 75, 'Psicologia da educação': 55, 'Teorias Pedagógicas': 25, 'História da Educação': 0},
     // Dia 6
     // Dia 7
     // Dia 8
