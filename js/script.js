@@ -1,48 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ##################################################################
-    // ## INÍCIO DA ÁREA DE EDIÇÃO: Insira seus dados aqui             ##
-    // ##################################################################
-
-    const planStartDate = '2025-08-10'; // FORMATO: 'AAAA-MM-DD'
-
-    const studyData = [
-        // Semana 1 (Dias 1-7)
-        25, 150, 180, 40,
-        // Semana 2 (Dias 8-14)
-        
-        // Semana 3 (Dias 15-21)
-        
-    ];
-
-    const pomodoroData = [
-        // Semana 1
-        1, 0, 4, 0,
-        // Semana 2
-        
-        // Semana 3
-        
-    ];
-
-    const dailySubjectData = [
-        // Dia 1 de estudo por disciplina
-        { 'Avaliação': 0, 'Psicologia da educação': 25},
-        // Dia 2
-        { 'Avaliação': 20, 'Psicologia da educação': 120},
-        // Dia 3
-        { 'Avaliação': 10, 'Psicologia da educação': 10, 'Teorias Pedagógicas': 120, 'História da Educação': 0},
-        // Dia 4
-        { 'Avaliação': 20, 'Psicologia da educação': 10, 'Teorias Pedagógicas': 10, 'História da Educação': 0},
-        // Dia 5
-        // Dia 6
-        // Dia 7
-        // Dia 8
-        // Dia 9
-        // Dia 10
-    ];
-    
-    // ##################################################################
-    // ## FIM DA ÁREA DE EDIÇÃO: Não altere o código abaixo            ##
+    // ## FIM DA ÁREA DE EDIÇÃO: A lógica começa aqui.                 ##
+    // ## Os dados agora são carregados do arquivo dados.js            ##
     // ##################################################################
 
     const TOTAL_DAYS = 70;
