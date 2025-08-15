@@ -219,32 +219,6 @@ canvas {
     padding: 10px;
 }
 
-.revisoes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.revisao-item h3 {
-    color: var(--accent2);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.revisao-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.revisao-item li {
-    background-color: var(--bg-dark);
-    padding: 0.8rem;
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-}
-
 footer {
     text-align: center;
     margin-top: 2rem;
