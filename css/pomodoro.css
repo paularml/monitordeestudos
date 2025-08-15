@@ -308,4 +308,29 @@ header h1 {
         background: white;
         border-radius: 3px;
     }
-}
+    /* ================================================= */
+    /* ## INÍCIO DA CORREÇÃO DE RESPONSIVIDADE DO POMODORO ## */
+    /* ================================================= */
+
+    /* Diminui o tamanho do display do timer */
+    #timer {
+        font-size: 4.5rem;
+    }
+    
+    /* Faz os botões de modo ficarem um pouco menores */
+    .mode-btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Diminui o tamanho e o espaçamento dos botões de controle */
+    .control-btn {
+        font-size: 0.9rem; /* Diminui a fonte */
+        padding: 0.8rem 1.2rem; /* Diminui o espaçamento interno */
+    }
+
+    /* Reduz o tamanho da fonte do contador */
+    #pomodoro-count {
+        font-size: 2.5rem;
+    }
+
+} /* Fim da media query */
