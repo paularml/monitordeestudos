@@ -181,6 +181,59 @@ header h1 {
     display: none;
 }
 
+/* ================================== */
+/* ESTILOS DO CONTADOR DE POMODORO  */
+/* ================================== */
+
+.counter-container {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--primary);
+}
+
+.counter-container h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--accent1);
+    margin-bottom: 1rem;
+}
+
+.counter-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#pomodoro-count {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3rem;
+    font-weight: 500;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#reset-count-btn {
+    background-color: #43265a;
+    color: #dec4ff;
+    border: 1px solid #654285;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#reset-count-btn:hover {
+    background-color: #4d3072;
+    color: white;
+}
+
 @media (max-width: 768px) {
 
     /* --- Ajustes Gerais --- */
