@@ -7,7 +7,7 @@ const planStartDate = '2025-08-10'; // FORMATO: 'AAAA-MM-DD'
 
 const studyData = [
     // Semana 1 (Dias 1-7)
-    25, 150, 180, 40, 155, 150, 0
+    25, 150, 180, 40, 155, 150, 
     // Semana 2 (Dias 8-14)
         
     // Semana 3 (Dias 15-21)
@@ -22,7 +22,7 @@ const studyData = [
 
 const pomodoroData = [
     // Semana 1
-    1, 0, 4, 0, 6, 0, 0
+    1, 0, 4, 0, 6, 0, 
     // Semana 2
           
     // Semana 3
