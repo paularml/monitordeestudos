@@ -49,7 +49,7 @@ const dailySubjectData = [
     // Dia 6
     { 'Avaliação': 120, 'Psicologia da educação': 30, 'Teorias Pedagógicas': 0, 'História da Educação': 0}
     // Dia 7
-    //{ 'Avaliação': 0, 'Psicologia da educação': 0, 'Teorias Pedagógicas': 0, 'História da Educação': 0},
+    // { 'Avaliação': 0, 'Psicologia da educação': 0, 'Teorias Pedagógicas': 0, 'História da Educação': 0},
     // Dia 8
     // Dia 9
     // Dia 10
