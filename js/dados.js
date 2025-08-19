@@ -9,7 +9,7 @@ const studyData = [
     // Semana 1 (Dias 1-7)
     25, 150, 180, 40, 155, 150, 0,
     // Semana 2 (Dias 8-14)
-    115, 40    
+    115, 40,    
     // Semana 3 (Dias 15-21)
     // Semana 4
     // Semana 5
@@ -24,7 +24,7 @@ const pomodoroData = [
     // Semana 1
     1, 0, 4, 0, 6, 0, 0,
     // Semana 2
-    2, 0     
+    2, 0,     
     // Semana 3
     // Semana 4
     // Semana 5
@@ -53,7 +53,7 @@ const dailySubjectData = [
     // Dia 8
     { 'Avaliação': 45, 'Psicologia da educação': 45, 'Teorias Pedagógicas': 0, 'Simulado Itapoá': 15, 'Simulado Artes': 10},
     // Dia 9
-    { 'Avaliação': 40, 'Psicologia da educação': 5, 'Teorias Pedagógicas': 0, 'Simulado Itapoá': 0, 'Simulado Artes': 0}
+    { 'Avaliação': 40, 'Psicologia da educação': 5, 'Teorias Pedagógicas': 0, 'Simulado Itapoá': 0, 'Simulado Artes': 0},
     // Dia 10
     // Dia 11
     // Dia 12
