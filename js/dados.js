@@ -24,7 +24,7 @@ const pomodoroData = [
     // Semana 1
     1, 0, 4, 0, 6, 0, 0,
     // Semana 2
-    2, 0,     
+    2,     
     // Semana 3
     // Semana 4
     // Semana 5
