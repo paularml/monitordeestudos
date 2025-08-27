@@ -9,8 +9,9 @@ const studyData = [
     // Semana 1 (Dias 1-7)
     25, 150, 180, 40, 155, 150, 0,
     // Semana 2 (Dias 8-14)
-    115, 40, 90,    
+    115, 40, 90, 0, 0, 0, 0, 
     // Semana 3 (Dias 15-21)
+    0, 0, 0, 
     // Semana 4
     // Semana 5
     // Semana 6
@@ -24,8 +25,9 @@ const pomodoroData = [
     // Semana 1
     1, 0, 4, 0, 6, 0, 0,
     // Semana 2
-    2, 0, 0,     
+    2, 0, 0, 0, 0, 0, 0,    
     // Semana 3
+    0, 0, 0, 
     // Semana 4
     // Semana 5
     // Semana 6
