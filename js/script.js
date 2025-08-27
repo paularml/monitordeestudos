@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ## Os dados agora são carregados do arquivo dados.js            ##
     // ##################################################################
 
-    const TOTAL_DAYS = 70;
+    const TOTAL_DAYS = 45;
 
     while (studyData.length < TOTAL_DAYS) studyData.push(0);
     while (pomodoroData.length < TOTAL_DAYS) pomodoroData.push(0);

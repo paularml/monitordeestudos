@@ -92,6 +92,5 @@ const dailySubjectData = [
     // Dia 42
     // Dia 43
     // Dia 44
-    // Dia 45
-    // Dia 46
+    // Dia 45    
 ];
