@@ -11,11 +11,14 @@ const studyData = [
     // Semana 2 (Dias 8-14)
     115, 40, 90, 0, 0, 0, 0, 
     // Semana 3 (Dias 15-21)
-    0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0,
     // Semana 4
+    0, 0, 0, 0, 0, 0, 0,
     // Semana 5
+    0, 120,
     // Semana 6
     // Semana 7
+    60,
     // Semana 8
     // Semana 9
     // Semana 10
@@ -27,8 +30,9 @@ const pomodoroData = [
     // Semana 2
     2, 0, 0, 0, 0, 0, 0,    
     // Semana 3
-    0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0,
     // Semana 4
+    0, 0, 0, 0, 0, 0, 0,
     // Semana 5
     // Semana 6
     // Semana 7
@@ -78,6 +82,7 @@ const dailySubjectData = [
     // Dia 28
     // Dia 29
     // Dia 30
+    { 'Inclusão': 120, 'Legislação': 90},
     // Dia 31
     // Dia 32
     // Dia 33
@@ -92,5 +97,6 @@ const dailySubjectData = [
     // Dia 42
     // Dia 43
     // Dia 44
-    // Dia 45    
+    // Dia 45
+    { 'Lei Lucas': 60, 'Legislação': 90},
 ];

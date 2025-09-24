@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ## Os dados agora são carregados do arquivo dados.js            ##
     // ##################################################################
 
-    const TOTAL_DAYS = 45;
+    const TOTAL_DAYS = 70;
 
     while (studyData.length < TOTAL_DAYS) studyData.push(0);
     while (pomodoroData.length < TOTAL_DAYS) pomodoroData.push(0);
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     const todaySubjectData = dailySubjectData.length > 0 ? dailySubjectData[dailySubjectData.length - 1] : {};
-    const pieChartColors = ['#600e61ff', '#310d75ff', '#a7058eff', '#5b3ab3', '#46736B', '#e489d5', '#50590C'];
+    const pieChartColors = ['#600e61ff', '#310d75ff', '#a7058eff', '#5b3ab3', '#365e56ff', '#e489d5', '#50590C', '#3b0820ff', '#104f63ff', '#36bea6ff', '#cf266dff'];
 
     const pieTotalCtx = document.getElementById('subject-chart-total')?.getContext('2d');
     if (pieTotalCtx) {
