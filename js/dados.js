@@ -98,5 +98,5 @@ const dailySubjectData = [
     // Dia 43
     // Dia 44
     // Dia 45
-    { 'Lei Lucas': 60, 'Legislação': 90},
+    { 'Lei Lucas': 60, 'Materiais didáticos': 120, 'Legislação': 45},
 ];
