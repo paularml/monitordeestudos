@@ -15,10 +15,10 @@ const studyData = [
     // Semana 4
     0, 0, 0, 0, 0, 0, 0,
     // Semana 5
-    0, 120,
+    0, 120, 0, 0, 0, 0, 0,
     // Semana 6
     // Semana 7
-    60,
+    255,
     // Semana 8
     // Semana 9
     // Semana 10
